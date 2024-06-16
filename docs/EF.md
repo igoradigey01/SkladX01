@@ -15,12 +15,22 @@
 ## EF mssql
 1. 
 - https://metanit.com/sharp/efcore/1.2.php
+- https://learn.microsoft.com/en-us/dotnet/core/tutorials/library-with-visual-studio-code?pivots=dotnet-8-0
 2. 
  
 - dotnet tool install --global dotnet-ef
 - dotnet tool update --global dotnet-ef
 - cd SkladX01
 - dotnet new sln --force
+- dotnet new classlib -o SkladDB 
+- dotnet sln add SkladDB/SkladDB.csproj
+- dotnet sln add SkladApi/SkladApi.csproj
+-  dotnet add  SkladApi/SkladApi.csproj  reference   SkladDB/SkladDB.csproj 
+- dotnet add package Microsoft.EntityFrameworkCore.Tools --version 8.0.6
+- dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 8.0.6
+- dotnet add package Microsoft.EntityFrameworkCore.Design
+3. 
+ - - dotnet ef dbcontext scaffold "Database=Sh_Skald;server=172.23.0.2;port=1433;UserId=sa;Password=2a1sp-msX01;" "Pomelo.EntityFrameworkCore.MySql" 
 
 ## help ef
  - https://learn.microsoft.com/ru-ru/ef/core/managing-schemas/scaffolding/?tabs=dotnet-core-cli

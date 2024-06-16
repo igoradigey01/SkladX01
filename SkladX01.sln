@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkladApi", "SkladApi\SkladApi.csproj", "{F54CF2B3-17BA-457A-A99D-1C1AC35EB5CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkladDB", "SkladDB\SkladDB.csproj", "{349730F6-F2DB-49D5-AA35-D27BF1267BD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -10,5 +14,15 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F54CF2B3-17BA-457A-A99D-1C1AC35EB5CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F54CF2B3-17BA-457A-A99D-1C1AC35EB5CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F54CF2B3-17BA-457A-A99D-1C1AC35EB5CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F54CF2B3-17BA-457A-A99D-1C1AC35EB5CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{349730F6-F2DB-49D5-AA35-D27BF1267BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{349730F6-F2DB-49D5-AA35-D27BF1267BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{349730F6-F2DB-49D5-AA35-D27BF1267BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{349730F6-F2DB-49D5-AA35-D27BF1267BD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
