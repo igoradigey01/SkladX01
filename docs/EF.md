@@ -30,7 +30,8 @@
 - dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 8.0.6
 - dotnet add package Microsoft.EntityFrameworkCore.Design
 3. 
- - - dotnet ef dbcontext scaffold "Database=Sh_Skald;server=172.23.0.2;port=1433;UserId=sa;Password=2a1sp-msX01;" "Pomelo.EntityFrameworkCore.MySql" 
+ - - dotnet ef dbcontext scaffold "Database=Sh_Skald;server=172.23.0.2;User Id=sa;Password=2a1sp-msX01;TrustServerCertificate=True;" "Microsoft.EntityFrameworkCore.SqlServer" 
+ 
 
 ## help ef
  - https://learn.microsoft.com/ru-ru/ef/core/managing-schemas/scaffolding/?tabs=dotnet-core-cli
