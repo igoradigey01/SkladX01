@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace SkladDB;
 
-public partial class ShSkaldContext : DbContext
+public partial class SkaldDBContext : DbContext
 {
-    public ShSkaldContext()
+    public SkaldDBContext()
     {
     }
 
-    public ShSkaldContext(DbContextOptions<ShSkaldContext> options)
+    public SkaldDBContext(DbContextOptions<SkaldDBContext> options)
         : base(options)
     {
     }
