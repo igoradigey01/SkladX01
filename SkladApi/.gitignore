@@ -38,11 +38,14 @@ testem.log
 .DS_Store
 Thumbs.db
 
-.angular
-*.txt
-
-
 .nx/cache
 
-
+.angular
 .nx/workspace-data
+appsettings.json
+appsettings.Production.json
+my-little-secret.txt
+*.txt
+.env
+ShopApi/published/
+images/
