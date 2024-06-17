@@ -49,7 +49,12 @@ test: ensure Tayne retains clothing
   https://github.com/igoradigey01/wsv2
   
   ```
-  ## igonore appsettings.json on push gitHub
+## igonore appsettings.json on push gitHub
    - add file appsettings.json in .gitignore
    - git rm --cached D:\VS_Prodject\v2\WebApi\ShopApi\appsettings.json
+## ignore 
+  -  git rm -r --cached .
+  -  git add .
+  -  git commit -am "Remove ignored files"
+  -  https://stackoverflow.com/questions/2347335/how-could-i-ignore-bin-and-obj-folders-from-git-repository
  
