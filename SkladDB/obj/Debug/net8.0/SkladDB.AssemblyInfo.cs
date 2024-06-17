@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SkladDB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c07e3ee8cf1d49ada314141434681763a243d8a8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+722f4cd667f1b71749a1c93c7e2e4a589bf9e695")]
 [assembly: System.Reflection.AssemblyProductAttribute("SkladDB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SkladDB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
