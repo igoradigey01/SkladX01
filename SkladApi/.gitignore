@@ -49,3 +49,5 @@ my-little-secret.txt
 .env
 ShopApi/published/
 images/
+bin/*
+obj/*

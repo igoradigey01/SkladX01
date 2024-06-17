@@ -42,7 +42,14 @@ Thumbs.db
 *.txt
 appsettings.Production.json
 
-.nx/cache
-
-
+.angular
 .nx/workspace-data
+appsettings.json
+appsettings.Production.json
+my-little-secret.txt
+*.txt
+.env
+ShopApi/published/
+images/
+bin/*
+obj/*
