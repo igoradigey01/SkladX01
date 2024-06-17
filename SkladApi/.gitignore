@@ -51,3 +51,12 @@ ShopApi/published/
 images/
 bin/*
 obj/*
+SkladDB/bin/Debug/net8.0/SkladDB.dll
+SkladDB/bin/Debug/net8.0/SkladDB.pdb
+SkladDB/obj/Debug/net8.0/SkladDB.AssemblyInfo.cs
+SkladDB/obj/Debug/net8.0/SkladDB.AssemblyInfoInputs.cache
+SkladDB/obj/Debug/net8.0/SkladDB.dll
+SkladDB/obj/Debug/net8.0/SkladDB.pdb
+SkladDB/obj/Debug/net8.0/SkladDB.sourcelink.json
+SkladDB/obj/Debug/net8.0/ref/SkladDB.dll
+SkladDB/obj/Debug/net8.0/refint/SkladDB.dll
