@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ShopApi.Model.Identity { 
+namespace X01.Model.Identity { 
     public class UserForRegistrationDto
     {
         public string? FirstName { get; set; }

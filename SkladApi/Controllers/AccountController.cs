@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
-using ShopApi.Model.Identity;
+using X01.Model.Identity;
 //-----------------
 using System.IdentityModel.Tokens.Jwt;
 using System.Net;

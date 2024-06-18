@@ -1,7 +1,7 @@
 
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using ShopApi.Model.Identity;
+using X01.Model.Identity;
 using SkladDB;
 
 using Microsoft.IdentityModel.Tokens;

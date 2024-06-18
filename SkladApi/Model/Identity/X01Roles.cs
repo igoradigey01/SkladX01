@@ -1,4 +1,4 @@
-namespace ShopApi.Model.Identity
+namespace X01.Model.Identity
 {
     
       // дублирует Enum при следующем рилизи - Enum Role убрать

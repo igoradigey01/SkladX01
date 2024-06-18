@@ -1,5 +1,5 @@
 ﻿
-namespace ShopApi.Model.Identity
+namespace X01.Model.Identity
 {
     public class ExternalGoogleDto
     {

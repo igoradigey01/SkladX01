@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 
-namespace ShopApi.Model.Identity
+namespace X01.Model.Identity
 {
      public class UserIdentityX01: IdentityUser{
         public string? FirstName { get; set; }
