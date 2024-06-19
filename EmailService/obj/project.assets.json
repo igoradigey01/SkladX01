@@ -509,24 +509,27 @@
     ]
   },
   "packageFolders": {
-    "/home/ks33/.nuget/packages/": {}
+    "C:\\Users\\ett66\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/myapp/VS_Ubuntu/SkladX01/EmailService/EmailService.csproj",
+      "projectUniqueName": "Z:\\EmailService\\EmailService.csproj",
       "projectName": "EmailService",
-      "projectPath": "/myapp/VS_Ubuntu/SkladX01/EmailService/EmailService.csproj",
-      "packagesPath": "/home/ks33/.nuget/packages/",
-      "outputPath": "/myapp/VS_Ubuntu/SkladX01/EmailService/obj/",
+      "projectPath": "Z:\\EmailService\\EmailService.csproj",
+      "packagesPath": "C:\\Users\\ett66\\.nuget\\packages\\",
+      "outputPath": "Z:\\EmailService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/ks33/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\ett66\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -575,7 +578,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/myapp/.dotnet/sdk/8.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

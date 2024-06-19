@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ShopApi.Model.Identity;
+using X01.Model.Identity;
 using SkladApi.Model;
 using SkladDB;
 
@@ -15,7 +15,7 @@ namespace SkladApi.Controllers;
 [Route("api/[controller]/[action]")]
 public class CustomerController: ControllerBase
 {
-        private readonly ShopDbContext _db;
+        private readonly SkaldDBContext _db;
 
         public CustomerController(SkaldDBContext db)
         {
@@ -29,15 +29,18 @@ public class CustomerController: ControllerBase
 
 
 
-            var articles = await (from b in _db.Клиент
+            var articles = await (from b in _db.Клиентs
                                  
                                   select new CustomerDto()
                                   {
                                       Id = b.Id,
-                                       OwnerId=b.,
-                                      Name = b.Name,                                     
-                                      Product_typeId = b.Product_typeId,
-                                      Hidden = b.Hidden
+                                      Псевдоним= b.Псевдоним,
+                                      Фио=b.Фио,
+                                      Город=b.Город,
+                                      Телефон=b.Телефон,
+                                      ПределКредита=b.ПределКредита                                      
+                                       
+                                      
                                   }).ToListAsync();
 
             if (articles == null) return NotFound();
