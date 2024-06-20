@@ -3,19 +3,16 @@
   "WorkspaceRootPath": "Y:\\\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F54CF2B3-17BA-457A-A99D-1C1AC35EB5CA}|SkladApi\\SkladApi.csproj|y:\\skladapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F54CF2B3-17BA-457A-A99D-1C1AC35EB5CA}|SkladApi\\SkladApi.csproj|y:\\skladapi\\controllers\\versioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F54CF2B3-17BA-457A-A99D-1C1AC35EB5CA}|SkladApi\\SkladApi.csproj|y:\\skladapi\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F54CF2B3-17BA-457A-A99D-1C1AC35EB5CA}|SkladApi\\SkladApi.csproj|y:\\skladapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F54CF2B3-17BA-457A-A99D-1C1AC35EB5CA}|SkladApi\\SkladApi.csproj|y:\\skladapi\\model\\identity\\appidentitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F54CF2B3-17BA-457A-A99D-1C1AC35EB5CA}|SkladApi\\SkladApi.csproj|y:\\skladapi\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F54CF2B3-17BA-457A-A99D-1C1AC35EB5CA}|SkladApi\\SkladApi.csproj|y:\\skladapi\\model\\dto\\emailmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 299,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "Y:\\SkladApi\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "..\\SkladApi\\Controllers\\AccountController.cs",
-              "ToolTip": "Y:\\SkladApi\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "..\\SkladApi\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAASwBIAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T18:31:15.987Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -74,6 +58,31 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VersionController.cs",
+              "DocumentMoniker": "Y:\\SkladApi\\Controllers\\VersionController.cs",
+              "RelativeDocumentMoniker": "..\\SkladApi\\Controllers\\VersionController.cs",
+              "ToolTip": "Y:\\SkladApi\\Controllers\\VersionController.cs",
+              "RelativeToolTip": "..\\SkladApi\\Controllers\\VersionController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T18:32:24.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "Y:\\SkladApi\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "..\\SkladApi\\Controllers\\AccountController.cs",
+              "ToolTip": "Y:\\SkladApi\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "..\\SkladApi\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAASwBIAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T18:31:15.987Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "AppIdentityDbContext.cs",
               "DocumentMoniker": "Y:\\SkladApi\\Model\\Identity\\AppIdentityDbContext.cs",
@@ -82,33 +91,7 @@
               "RelativeToolTip": "..\\SkladApi\\Model\\Identity\\AppIdentityDbContext.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAACEAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T15:17:07.317Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EmailMessageDto.cs",
-              "DocumentMoniker": "Y:\\SkladApi\\Model\\DTO\\EmailMessageDto.cs",
-              "RelativeDocumentMoniker": "..\\SkladApi\\Model\\DTO\\EmailMessageDto.cs",
-              "ToolTip": "Y:\\SkladApi\\Model\\DTO\\EmailMessageDto.cs",
-              "RelativeToolTip": "..\\SkladApi\\Model\\DTO\\EmailMessageDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T15:07:56.197Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmailController.cs",
-              "DocumentMoniker": "Y:\\SkladApi\\Controllers\\EmailController.cs",
-              "RelativeDocumentMoniker": "..\\SkladApi\\Controllers\\EmailController.cs",
-              "ToolTip": "Y:\\SkladApi\\Controllers\\EmailController.cs",
-              "RelativeToolTip": "..\\SkladApi\\Controllers\\EmailController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T15:06:38.241Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-20T15:17:07.317Z"
             },
             {
               "$type": "Document",
