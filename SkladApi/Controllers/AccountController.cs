@@ -1,3 +1,9 @@
+//-----------------
+using System.IdentityModel.Tokens.Jwt;
+using System.Net;
+using System.Security.Claims;
+using System.Security.Cryptography;
+using System.Text;
 using EmailService;
 using Google.Apis.Auth;
 using Microsoft.AspNetCore.Authorization;
@@ -7,16 +13,9 @@ using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using X01.Model.Identity;
-//-----------------
-using System.IdentityModel.Tokens.Jwt;
-using System.Net;
-using System.Security.Claims;
-using System.Security.Cryptography;
-using System.Text;
-using Microsoft.AspNetCore.Authentication.Cookies;
 
 
-namespace ShopAPI.Controllers
+namespace SkladApi.Controllers
 {
 
     [ApiController]
@@ -101,7 +100,7 @@ namespace ShopAPI.Controllers
 
                 var accessToken = GenerateTokenAsync(user).Result;
                 var refreshToken = GenerateRefreshToken();
-               await SetRefreshTokenAsync(refreshToken, user);
+                await SetRefreshTokenAsync(refreshToken, user);
 
 
                 return Ok(new TokenModelDto { Access_token = accessToken });
@@ -195,7 +194,7 @@ namespace ShopAPI.Controllers
 
                 if (user_tel == null)
                 {
-                    user_tel = new UserIdentityX01 { FirstName = user.FirstName, UserName = user.UserName, NormalizedUserName = user.Id,SpaId=user.SpaId };
+                    user_tel = new UserIdentityX01 { FirstName = user.FirstName, UserName = user.UserName, NormalizedUserName = user.Id, SpaId = user.SpaId };
                     await _userManager.CreateAsync(user_tel);
                     //prepare and send an email for the email confirmation
                     await _userManager.AddToRoleAsync(user_tel, X01Roles.Shopper);
@@ -214,7 +213,7 @@ namespace ShopAPI.Controllers
                 _ = SetRefreshTokenAsync(refreshToken, user_tel);
 
 
-                return Ok(new TokenModelDto { Access_token = accessToken });;
+                return Ok(new TokenModelDto { Access_token = accessToken }); ;
             }
 
 
@@ -242,14 +241,14 @@ namespace ShopAPI.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> GoogleExternalLogin([FromBody] ExternalGoogleDto externalAuth)
         {
-            Console.WriteLine("gooleSpaId" +externalAuth.IdSpa);
+            Console.WriteLine("gooleSpaId" + externalAuth.IdSpa);
 
-              if (!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-            
-           
+
+
             var payload = await VerifyGoogleToken(externalAuth);
             if (payload == null)
                 return BadRequest("Invalid External Authentication.");
@@ -271,7 +270,7 @@ namespace ShopAPI.Controllers
                         FirstName = payload.FamilyName,
                         LastName = payload.Name,
                         Address = "",
-                        SpaId=externalAuth.IdSpa
+                        SpaId = externalAuth.IdSpa
 
                     };
                     await _userManager.CreateAsync(user);
@@ -294,12 +293,12 @@ namespace ShopAPI.Controllers
 
             var accessToken = GenerateTokenAsync(user).Result;
             var refreshToken = GenerateRefreshToken();
-           await SetRefreshTokenAsync(refreshToken, user);
-             //await HttpContext.User
+            await SetRefreshTokenAsync(refreshToken, user);
+            //await HttpContext.User
 
 
             return Ok(new TokenModelDto { Access_token = accessToken });
-         
+
         }
 
 
@@ -334,13 +333,14 @@ namespace ShopAPI.Controllers
             {
                 //  user = await _userManager.FindByEmailAsync(payload.Email);
 
-                user = new UserIdentityX01 { 
-                    UserName = payload.UserId.ToString(), 
+                user = new UserIdentityX01
+                {
+                    UserName = payload.UserId.ToString(),
                     NormalizedUserName = payload.UserId.ToString(),
-                    FirstName = payload.FirstName, 
+                    FirstName = payload.FirstName,
                     LastName = payload.LastName,
-                    SpaId=externalAuth.IdSpa
-                    };
+                    SpaId = externalAuth.IdSpa
+                };
                 await _userManager.CreateAsync(user);
 
                 //prepare and send an email for the email confirmation
@@ -405,8 +405,9 @@ namespace ShopAPI.Controllers
                 {"email", user.Email ??""}
             };
 
-            if(String.IsNullOrEmpty( userForRegistration.ClientURI)){
-                 userForRegistration.ClientURI="";
+            if (String.IsNullOrEmpty(userForRegistration.ClientURI))
+            {
+                userForRegistration.ClientURI = "";
 
             }
 
@@ -449,8 +450,9 @@ namespace ShopAPI.Controllers
                 {"token", token },
                 {"email", forgotPasswordDto.Email }
             };
-            if(String.IsNullOrEmpty( forgotPasswordDto.ClientURI)){
-                 forgotPasswordDto.ClientURI="";
+            if (String.IsNullOrEmpty(forgotPasswordDto.ClientURI))
+            {
+                forgotPasswordDto.ClientURI = "";
 
             }
 
@@ -467,12 +469,12 @@ namespace ShopAPI.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> ResetPasswordMail([FromBody] ResetPasswordMailDto resetPasswordDto)
         {
-            if (resetPasswordDto==null || !ModelState.IsValid)
+            if (resetPasswordDto == null || !ModelState.IsValid)
                 return BadRequest();
-                if(string.IsNullOrEmpty(resetPasswordDto.Email) || 
-                 string.IsNullOrEmpty(resetPasswordDto.Token)||
-                 string.IsNullOrEmpty(resetPasswordDto.Password)                 
-                 ) return BadRequest();
+            if (string.IsNullOrEmpty(resetPasswordDto.Email) ||
+             string.IsNullOrEmpty(resetPasswordDto.Token) ||
+             string.IsNullOrEmpty(resetPasswordDto.Password)
+             ) return BadRequest();
 
             var user = await _userManager.FindByEmailAsync(resetPasswordDto.Email);
             if (user == null)
@@ -539,7 +541,7 @@ namespace ShopAPI.Controllers
 
             string token = await GenerateTokenAsync(user);
             var newRefreshToken = GenerateRefreshToken();
-             await     SetRefreshTokenAsync(newRefreshToken, user);
+            await SetRefreshTokenAsync(newRefreshToken, user);
 
             return Ok(new TokenModelDto { Access_token = token });
         }
@@ -553,7 +555,7 @@ namespace ShopAPI.Controllers
                 Created = DateTime.Now
             };
 
-            return  refreshToken;
+            return refreshToken;
         }
 
         private async Task SetRefreshTokenAsync(RefreshToken newRefreshToken, UserIdentityX01 user)
@@ -601,7 +603,7 @@ namespace ShopAPI.Controllers
             string joinedString = String.Empty;
             if (audence != null)
             {
-               joinedString = audence.Aggregate((prev, current) => prev + "," + current);
+                joinedString = audence.Aggregate((prev, current) => prev + "," + current);
             }
             var tokenHandler = new JwtSecurityTokenHandler();
             var time = DateTime.UtcNow;
@@ -612,7 +614,7 @@ namespace ShopAPI.Controllers
                 Expires = time.Add(TimeSpan.FromMinutes(LIFETIME)),
                 Issuer = Configuration.GetSection("Authentication:Schemes:JwtBearer:Issuer").Value,// издатель токена
                 Audience = joinedString,// потребитель токена
-               SigningCredentials = new SigningCredentials(mySecurityKey, SecurityAlgorithms.HmacSha256Signature)
+                SigningCredentials = new SigningCredentials(mySecurityKey, SecurityAlgorithms.HmacSha256Signature)
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
@@ -722,7 +724,7 @@ namespace ShopAPI.Controllers
 
             var Vk = new HttpClient();
             Vk.DefaultRequestHeaders.Add("Connection", "close");
-           
+
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(req);
             request.UseDefaultCredentials = true;
             request.PreAuthenticate = true;

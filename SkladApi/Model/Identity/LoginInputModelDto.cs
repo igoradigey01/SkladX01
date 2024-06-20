@@ -8,7 +8,7 @@ namespace X01.Model.Identity
         public string? ReturnUrl { get; set; }
 
         // [Required(ErrorMessage = "Незадан Email")]       
-        
+
         public string? Email { get; set; }
 
         public string? Phone { get; set; }

@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Authorization;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using X01.Model.Identity;
 using SkladApi.Model;
 using SkladDB;
 
@@ -23,7 +22,7 @@ public class CustomerController : ControllerBase
     }
 
 
-    [HttpGet("{owner_id}")]
+    [HttpGet]
     [Authorize(AuthenticationSchemes = "Bearer")]
     public async Task<ActionResult<IEnumerable<CustomerDto>>> GetAll()
     {
@@ -57,7 +56,7 @@ public class CustomerController : ControllerBase
     [Authorize(AuthenticationSchemes = "Bearer")]
     public async Task<ActionResult<CustomerDto>> GetItem(int id)
     {
-        var item = await _db.Клиентs.Select(d => new CustomerDto()
+        var item = await _db.Клиентs.Select(b => new CustomerDto()
         {
             Id = b.Id,
             Псевдоним = b.Псевдоним,
@@ -96,12 +95,12 @@ public class CustomerController : ControllerBase
 
         var dto = new CustomerDto()
         {
-             Id = b.Id,
-            Псевдоним = b.Псевдоним,
-            Фио = b.Фио,
-            Город = b.Город,
-            Телефон = b.Телефон,
-            ПределКредита = b.ПределКредита
+            Id = item.Id,
+            Псевдоним = item.Псевдоним,
+            Фио = item.Фио,
+            Город = item.Город,
+            Телефон = item.Телефон,
+            ПределКредита = item.ПределКредита
         };
 
         return CreatedAtRoute("GetItem", new { id = item.Id }, dto);
@@ -114,7 +113,7 @@ public class CustomerController : ControllerBase
     // (put) -изменить
     [HttpPut("{id}")]
     [Authorize(AuthenticationSchemes = "Bearer")]
-    public async Task<ActionResult> Update(int id, Article item)
+    public async Task<ActionResult> Update(int id, Клиент item)
     {
 
         if (!ModelState.IsValid)
@@ -152,17 +151,17 @@ public class CustomerController : ControllerBase
 
     [HttpDelete("{id}")]
     [Authorize(AuthenticationSchemes = "Bearer")]
-    public async Task<ActionResult<Article>> Delete(int id)
+    public async Task<ActionResult<Клиент>> Delete(int id)
     {
 
 
-        Article? item = await _db.Articles!.FindAsync(id);
+        Клиент? item = await _db.Клиентs.FindAsync(id);
         if (item == null)
         {
             return NotFound();
         }
 
-        _db.Articles.Remove(item);
+        _db.Клиентs.Remove(item);
         await _db.SaveChangesAsync();
         return Ok(item);
 
@@ -170,9 +169,9 @@ public class CustomerController : ControllerBase
 
     private bool ArticleExists(int id)
     {
-        return _db.Articles!.Count(e => e.Id == id) > 0;
+        return _db.Клиентs.Count(e => e.Id == id) > 0;
     }
 }
-}
+
 
 

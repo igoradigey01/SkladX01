@@ -1,7 +1,7 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
 
-namespace ShopApi.Controllers
+namespace SkladApi.Controllers
 {
 
     public class VersionInfo
@@ -18,7 +18,7 @@ namespace ShopApi.Controllers
         string _description = "Api Sklad- вторая редакция ( aspnetcore -net8.0.6)(17.06.24)";
 
 
-       
+
 
 
 

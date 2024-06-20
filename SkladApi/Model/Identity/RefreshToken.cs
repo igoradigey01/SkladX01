@@ -1,6 +1,7 @@
-namespace X01.Model.Identity {
+namespace X01.Model.Identity
+{
 
-        public class RefreshToken
+    public class RefreshToken
     {
         public string Token { get; set; } = string.Empty;
         public DateTime Created { get; set; } = DateTime.Now;

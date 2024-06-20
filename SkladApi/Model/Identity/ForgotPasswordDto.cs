@@ -5,7 +5,7 @@ namespace X01.Model.Identity
     {
         [Required]
         [EmailAddress]
-        public string Email { get; set; }=String.Empty;
+        public string Email { get; set; } = String.Empty;
 
         [Required]
         public string? ClientURI { get; set; }

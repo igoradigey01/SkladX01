@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace X01.Model.Identity
+﻿namespace X01.Model.Identity
 {
     public class RegistrationResponseDto
     {

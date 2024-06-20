@@ -1,15 +1,14 @@
 ﻿
-using Microsoft.AspNetCore.Authorization;
-
-using Microsoft.AspNetCore.Mvc;
 using EmailService;
-using SkladApi.Dto;
+using Microsoft.AspNetCore.Authorization;
+using X01.Dto;
+using Microsoft.AspNetCore.Mvc;
 
 namespace SkladApi.Controllers
 {
 
 
-    
+
     [Route("api/[controller]")]
     [ApiController]
     public class EmailController : ControllerBase
@@ -27,11 +26,11 @@ namespace SkladApi.Controllers
         [HttpPost]
         [Authorize]
         public IActionResult Post(EmailMessageDto mess)
-        {   
-            
-            
-             // {"кому"} ,"тема письма" ,"содержание письма"
-            var message = new Message(new string[] { mess.To }, mess.Subject,mess.Content, null);
+        {
+
+
+            // {"кому"} ,"тема письма" ,"содержание письма"
+            var message = new Message(new string[] { mess.To }, mess.Subject, mess.Content, null);
             _emailSender.SendEmail(message);
 
             return Ok();

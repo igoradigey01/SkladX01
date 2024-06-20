@@ -1,14 +1,11 @@
 
+using System.Text;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using X01.Model.Identity;
-using SkladDB;
-
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
-using System.Text;
-
-using Microsoft.AspNetCore.HttpOverrides;
+using SkladDB;
+using X01.Model.Identity;
 
 
 
@@ -39,8 +36,10 @@ string connectString = String.Empty;
 if (builder.Environment.IsDevelopment())
 {
     connectString = builder.Configuration["ConnectionStrings:DeveloperX01"]!;
-   // Console.WriteLine(connectString);
-}else{
+    // Console.WriteLine(connectString);
+}
+else
+{
     connectString = builder.Configuration.GetSection("ConnectString").Value!;
 
 

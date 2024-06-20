@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;
 
 
 namespace X01.Model.Identity
@@ -31,7 +31,7 @@ namespace X01.Model.Identity
            : base(options)
         {
             Configuration = configuration;
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -76,7 +76,7 @@ namespace X01.Model.Identity
 
             var passHash = new PasswordHasher<UserIdentityX01>();
 
-            
+
             var spaClients = Configuration.GetSection("IdentityX01:DbContext:SpaClients").GetChildren().ToList();
 
             Console.WriteLine("Configuration count-" + spaClients.Count);
@@ -122,11 +122,11 @@ namespace X01.Model.Identity
 
                     user_admin.PasswordHash = passHash.HashPassword(user_admin, spaclient.Admin.Pass);
                     user_manager.PasswordHash = passHash.HashPassword(user_manager, spaclient.Manager.Pass);
-                   
-                   
+
+
                     builder.Entity<UserIdentityX01>().HasData(user_admin);
 
-                     builder.Entity<UserIdentityX01>().HasData(user_manager);
+                    builder.Entity<UserIdentityX01>().HasData(user_manager);
 
                     //  Console.WriteLine(item.Key);
 

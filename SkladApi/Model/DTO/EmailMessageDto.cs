@@ -1,4 +1,4 @@
-namespace ShopApi.Dto
+namespace X01.Dto
 {
     public class EmailMessageDto
     {

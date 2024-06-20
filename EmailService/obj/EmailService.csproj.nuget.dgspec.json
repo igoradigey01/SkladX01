@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\EmailService\\EmailService.csproj": {}
+    "Y:\\EmailService\\EmailService.csproj": {}
   },
   "projects": {
-    "Z:\\EmailService\\EmailService.csproj": {
+    "Y:\\EmailService\\EmailService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\EmailService\\EmailService.csproj",
+        "projectUniqueName": "Y:\\EmailService\\EmailService.csproj",
         "projectName": "EmailService",
-        "projectPath": "Z:\\EmailService\\EmailService.csproj",
+        "projectPath": "Y:\\EmailService\\EmailService.csproj",
         "packagesPath": "C:\\Users\\ett66\\.nuget\\packages\\",
-        "outputPath": "Z:\\EmailService\\obj\\",
+        "outputPath": "Y:\\EmailService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ett66\\AppData\\Roaming\\NuGet\\NuGet.Config",

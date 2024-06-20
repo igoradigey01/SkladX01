@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\SkladDB\\SkladDB.csproj": {}
+    "Y:\\SkladDB\\SkladDB.csproj": {}
   },
   "projects": {
-    "Z:\\SkladDB\\SkladDB.csproj": {
+    "Y:\\SkladDB\\SkladDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\SkladDB\\SkladDB.csproj",
+        "projectUniqueName": "Y:\\SkladDB\\SkladDB.csproj",
         "projectName": "SkladDB",
-        "projectPath": "Z:\\SkladDB\\SkladDB.csproj",
+        "projectPath": "Y:\\SkladDB\\SkladDB.csproj",
         "packagesPath": "C:\\Users\\ett66\\.nuget\\packages\\",
-        "outputPath": "Z:\\SkladDB\\obj\\",
+        "outputPath": "Y:\\SkladDB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ett66\\AppData\\Roaming\\NuGet\\NuGet.Config",

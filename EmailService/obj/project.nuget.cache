@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lUFZl7f197w=",
+  "dgSpecHash": "Cp0clFODT5s=",
   "success": true,
-  "projectFilePath": "Z:\\EmailService\\EmailService.csproj",
+  "projectFilePath": "Y:\\EmailService\\EmailService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ett66\\.nuget\\packages\\mailkit\\3.2.0\\mailkit.3.2.0.nupkg.sha512",
     "C:\\Users\\ett66\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
