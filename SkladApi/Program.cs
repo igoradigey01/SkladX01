@@ -12,6 +12,16 @@ using X01.Model.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var emailConfig = builder.Configuration.
+ GetSection("EmailConfiguration")
+                .Get<EmailConfiguration>();
+
+if (emailConfig != null)
+{
+    builder.Services.AddSingleton(emailConfig);
+    builder.Services.AddScoped<IEmailSender, EmailSender>();
+}
+
 // Add services to the container.
 var urls = builder.Configuration.GetSection("CorsPolicy").Get<string[]>()!;
 
