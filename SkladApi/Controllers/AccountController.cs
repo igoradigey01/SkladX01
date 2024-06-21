@@ -62,6 +62,11 @@ namespace SkladApi.Controllers
             {
                 return BadRequest(" Неверный Email клиента");
             }
+            if (string.IsNullOrEmpty(login.Password))
+            {
+                return BadRequest(" Неверный Password клиента");
+
+            }
             UserIdentityX01? user;
             if (!string.IsNullOrEmpty(login.Email))
             {
@@ -88,11 +93,7 @@ namespace SkladApi.Controllers
                 return Unauthorized("Email не подтвержден");
             }
 
-            if (string.IsNullOrEmpty(login.Password))
-            {
-                return BadRequest(" Неверный Password клиента");
-
-            }
+            
 
             var result = await _loginManager.PasswordSignInAsync(user, login.Password, login.RememberMe, lockoutOnFailure: true);
             if (result.Succeeded)

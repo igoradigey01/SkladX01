@@ -3,19 +3,7 @@
   "WorkspaceRootPath": "Y:\\\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F54CF2B3-17BA-457A-A99D-1C1AC35EB5CA}|SkladApi\\SkladApi.csproj|y:\\skladapi\\model\\identity\\appidentitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F54CF2B3-17BA-457A-A99D-1C1AC35EB5CA}|SkladApi\\SkladApi.csproj|y:\\skladapi\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F54CF2B3-17BA-457A-A99D-1C1AC35EB5CA}|SkladApi\\SkladApi.csproj|y:\\skladapi\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F54CF2B3-17BA-457A-A99D-1C1AC35EB5CA}|SkladApi\\SkladApi.csproj|y:\\skladapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F54CF2B3-17BA-457A-A99D-1C1AC35EB5CA}|SkladApi\\SkladApi.csproj|y:\\skladapi\\controllers\\versioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,64 +50,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AppIdentityDbContext.cs",
-              "DocumentMoniker": "Y:\\SkladApi\\Model\\Identity\\AppIdentityDbContext.cs",
-              "RelativeDocumentMoniker": "..\\SkladApi\\Model\\Identity\\AppIdentityDbContext.cs",
-              "ToolTip": "Y:\\SkladApi\\Model\\Identity\\AppIdentityDbContext.cs",
-              "RelativeToolTip": "..\\SkladApi\\Model\\Identity\\AppIdentityDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T05:54:14.969Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CustomerController.cs",
-              "DocumentMoniker": "Y:\\SkladApi\\Controllers\\CustomerController.cs",
-              "RelativeDocumentMoniker": "..\\SkladApi\\Controllers\\CustomerController.cs",
-              "ToolTip": "Y:\\SkladApi\\Controllers\\CustomerController.cs",
-              "RelativeToolTip": "..\\SkladApi\\Controllers\\CustomerController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-21T05:49:32.987Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "Y:\\SkladApi\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "..\\SkladApi\\appsettings.Development.json",
-              "ToolTip": "Y:\\SkladApi\\appsettings.Development.json",
-              "RelativeToolTip": "..\\SkladApi\\appsettings.Development.json",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABIAAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-21T05:02:02.703Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "VersionController.cs",
-              "DocumentMoniker": "Y:\\SkladApi\\Controllers\\VersionController.cs",
-              "RelativeDocumentMoniker": "..\\SkladApi\\Controllers\\VersionController.cs",
-              "ToolTip": "Y:\\SkladApi\\Controllers\\VersionController.cs",
-              "RelativeToolTip": "..\\SkladApi\\Controllers\\VersionController.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAuwAwAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T18:32:24.617Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "AccountController.cs",
               "DocumentMoniker": "Y:\\SkladApi\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "..\\SkladApi\\Controllers\\AccountController.cs",
               "ToolTip": "Y:\\SkladApi\\Controllers\\AccountController.cs",
               "RelativeToolTip": "..\\SkladApi\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAowAEAAAAFAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAADMAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-20T18:31:15.987Z",
               "EditorCaption": ""
