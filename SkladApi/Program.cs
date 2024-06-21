@@ -43,7 +43,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 string connectString = String.Empty;
 
-if (builder.Environment.IsDevelopment())
+/* if (builder.Environment.IsDevelopment())
 {
     connectString = builder.Configuration["ConnectionStrings:DeveloperX01"]!;
     // Console.WriteLine(connectString);
@@ -52,15 +52,19 @@ else
 {
     connectString = builder.Configuration.GetSection("ConnectString").Value!;
 
-
+ 
 }
+*/
+
+ connectString = builder.Configuration.GetSection("ConnectString").Value!;
 
 var connectStringSklad = connectString + "Database=Sh_Skald;";
 
-var connectStringAppIdentity = connectString + "database=AppIdentityDB;";
+var connectStringIdentity = connectString + "database=AppIdentityDB;";
+
 
 builder.Services.AddDbContext<AppIdentityDbContext>(
-    options => options.UseSqlServer(connectStringAppIdentity)
+    options => options.UseSqlServer(connectStringIdentity)
 );
 
 builder.Services.AddDbContext<SkaldDBContext>(

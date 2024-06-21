@@ -5,12 +5,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SkladApi.Model;
 using SkladDB;
+using X01.Model.Identity;
 
 
 namespace SkladApi.Controllers;
 
 [ApiController]
-//  [Authorize(Roles = X01Roles.Admin + "," + X01Roles.Manager)]
+ [Authorize(Roles = X01Roles.Admin + "," + X01Roles.Manager)]
 [Route("api/[controller]/[action]")]
 public class CustomerController : ControllerBase
 {

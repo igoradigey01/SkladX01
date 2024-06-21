@@ -31,7 +31,8 @@ namespace X01.Model.Identity
            : base(options)
         {
             Configuration = configuration;
-            //Database.EnsureCreated();
+          //  Database.EnsureDeleted();
+            Database.EnsureCreated();
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
