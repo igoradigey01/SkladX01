@@ -47,7 +47,7 @@ appsettings.Production.json
 my-little-secret.txt
 *.txt
 .env
-ShopApi/published/
+published/
 images/
 bin/*
 obj/*

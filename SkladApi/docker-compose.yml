@@ -11,28 +11,37 @@ services:
     ports: 
       - 8080:8080
 
+
+  skladapi:
+    depends_on:
+      - mssql
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+        - ./images:/app/wwwroot/images
+    environment:
+       ASPNETCORE_ENVIRONMENT: Production
+       ASPNETCORE_URLS: http://+:80
+      
+    ports:
+      - 80
+    restart: always
+
   mssql:
-    image: mcr.microsoft.com/mssql/server:2019-latest
+    image:   mcr.microsoft.com/mssql/server:2019-latest
     restart: always
     volumes:
        - ./mssql:/usr/sbin/mssql
     environment:  
         ACCEPT_EULA: Y         
-        MSSQL_SA_PASSWORD: 2a1sp-msX01
+        MSSQL_SA_PASSWORD:  2a1sp-msX01
     ports:
-       - 1433:1433
+    - 1433:1433
 
-  db:
-    image: mysql:8.4
-    restart: always
-    volumes:
-      - ./mysql:/usr/sbin/mysql
-    environment:          
-        MYSQL_ROOT_PASSWORD: 2a1sp-myX01
-        MYSQL_DATABASE: AuthUserDB
-    ports:
-      - 3306:3306
+   
 
+  
  
     
 
