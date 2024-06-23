@@ -43,22 +43,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 string connectString = String.Empty;
 
-/* if (builder.Environment.IsDevelopment())
-{
-    connectString = builder.Configuration["ConnectionStrings:DeveloperX01"]!;
-    // Console.WriteLine(connectString);
-}
-else
-{
-    connectString = builder.Configuration.GetSection("ConnectString").Value!;
 
- 
-}
-*/
 
  connectString = builder.Configuration.GetSection("ConnectString").Value!;
 
-var connectStringSklad = connectString + "Database=Sh_Skald;";
+var connectStringSklad = connectString + "Database=Sklad_Sh;";
 
 var connectStringIdentity = connectString + "database=AppIdentityDB;";
 

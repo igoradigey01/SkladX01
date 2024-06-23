@@ -14,7 +14,7 @@ services:
 
   skladapi:
     depends_on:
-      - mssql
+      - db
     build:
       context: .
       dockerfile: dockerfile
@@ -28,7 +28,7 @@ services:
       - 80
     restart: always
 
-  mssql:
+  db:
     image:   mcr.microsoft.com/mssql/server:2019-latest
     restart: always
     volumes:
