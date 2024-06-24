@@ -63,10 +63,10 @@ public partial class SkaldDBContext : DbContext
 
     public virtual DbSet<ХарактеристикаНоменклатуры> ХарактеристикаНоменклатурыs { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+   /*  protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Database=Sh_Skald;server=172.23.0.2;User Id=sa;Password=2a1sp-msX01;TrustServerCertificate=True;");
-
+ */
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.UseCollation("Cyrillic_General_CI_AS");
