@@ -14,10 +14,38 @@ services:
 
   skladapi:
     depends_on:
-      - db
+      - msdb
+               # image: skladhs:v1.0
     build:
-      context: .
-      dockerfile: dockerfile
+       context: .
+       dockerfile: dockerfile
+
+    volumes:
+        - ./images:/app/wwwroot/images
+    environment:
+       ASPNETCORE_ENVIRONMENT: Production
+       ASPNETCORE_URLS: http://+:82
+      
+    ports:
+      - 82
+    restart: always
+
+  msdb:
+    image:  mssql:v1.0                             #  mcr.microsoft.com/mssql/server:2019-latest
+    restart: always
+    volumes:
+       - ./mssql:/usr/sbin/mssql
+    environment:  
+        ACCEPT_EULA: Y         
+        MSSQL_SA_PASSWORD:  2a1sp-msX01
+    ports:
+    - 1433:1433
+
+
+  webapi:
+    depends_on:
+      - db
+    image: shopapi:v2.0
     volumes:
         - ./images:/app/wwwroot/images
     environment:
@@ -29,15 +57,18 @@ services:
     restart: always
 
   db:
-    image:  mssql:v1.0                             #  mcr.microsoft.com/mssql/server:2019-latest
+    image: mysql:v1.0
     restart: always
     volumes:
-       - ./mssql:/usr/sbin/mssql
-    environment:  
-        ACCEPT_EULA: Y         
-        MSSQL_SA_PASSWORD:  2a1sp-msX01
+      - ./mysql:/usr/sbin/mysql
+      
+    environment:   
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+        
+        # cm file .emv
+   
     ports:
-    - 1433:1433
+      - 3306:3306
 
    
 

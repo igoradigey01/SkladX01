@@ -1,6 +1,8 @@
 ## swagger
  - https://s.x-01.ru/swg/swagger.html
 
+ 
+
 ## dotnet publish
 - cd SkladApi
 - dotnet run 
